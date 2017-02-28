@@ -1,0 +1,46 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+    defaultConfig {
+        applicationId "java_lang_programming.com.android_rxjava2_demo"
+        minSdkVersion 16
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        jackOptions {
+            enabled true
+        }
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:' + rootProject.supportLibVersion
+    compile 'com.android.support:design:' + rootProject.supportLibVersion
+    compile 'com.android.support:support-v4:' + rootProject.supportLibVersion
+    testCompile 'junit:junit:4.12'
+
+    compile 'io.reactivex.rxjava2:rxandroid:' + rootProject.rxandroidVersion
+    // Because RxAndroid releases are few and far between, it is recommended you also
+    // explicitly depend on RxJava's latest version for bug fixes and new features.
+    compile 'io.reactivex.rxjava2:rxjava:' + rootProject.rxjavaVersion
+    // https://github.com/JakeWharton/ThreeTenABP
+    compile 'com.jakewharton.threetenabp:threetenabp:' + rootProject.threetenabp
+    testCompile 'junit:junit:4.12'
+}
