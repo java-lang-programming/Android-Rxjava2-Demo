@@ -34,6 +34,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
+import java_lang_programming.com.android_rxjava2_demo.article78.BmiCalculationActivity;
 import java_lang_programming.com.android_rxjava2_demo.article77.TimeDisplayActivity;
 
 public class MainActivity extends AppCompatActivity
@@ -49,6 +50,9 @@ public class MainActivity extends AppCompatActivity
         Button btnTimeDisplayApplication = (Button) findViewById(R.id.btn_time_display_application);
         btnTimeDisplayApplication.setOnClickListener(view -> {moveTimeDisplayActivity();});
 
+        Button btnBmiCalculationApplication = (Button) findViewById(R.id.btn_bmi_calculation_application);
+        btnBmiCalculationApplication.setOnClickListener(view -> {moveBmiCalculationActivity();});
+
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,7 +65,7 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawer.setDrawerListener(toggle);
+        drawer.addDrawerListener(toggle);
         toggle.syncState();
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
@@ -127,6 +131,11 @@ public class MainActivity extends AppCompatActivity
 
     private void moveTimeDisplayActivity() {
         Intent intent = new Intent(this, TimeDisplayActivity.class);
+        startActivity(intent);
+    }
+
+    private void moveBmiCalculationActivity() {
+        Intent intent = new Intent(this, BmiCalculationActivity.class);
         startActivity(intent);
     }
 }

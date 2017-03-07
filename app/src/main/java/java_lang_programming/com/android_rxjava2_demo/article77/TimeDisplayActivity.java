@@ -38,7 +38,7 @@ import java_lang_programming.com.android_rxjava2_demo.R;
  * Screen for TimeDisplayApplication
  */
 public class TimeDisplayActivity extends AppCompatActivity {
-    private static final String TAG = "TimeDisplayActivity";
+    // private static final String TAG = "TimeDisplayActivity";
     private TextView time;
     private Disposable disposable;
 

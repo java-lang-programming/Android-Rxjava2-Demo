@@ -3,7 +3,7 @@
     package="java_lang_programming.com.android_rxjava2_demo">
 
     <application
-        android:allowBackup="true"
+        android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
@@ -18,7 +18,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".article77.TimeDisplayActivity"></activity>
+        <activity android:name=".article77.TimeDisplayActivity" />
+        <activity android:name=".article78.BmiCalculationActivity"></activity>
     </application>
 
 </manifest>

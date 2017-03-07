@@ -19,4 +19,11 @@
         android:layout_height="wrap_content"
         android:text="Time display application" />
 
+    <Button
+        android:id="@+id/btn_bmi_calculation_application"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_time_display_application"
+        android:text="Bmi Calculation Application" />
+
 </RelativeLayout>

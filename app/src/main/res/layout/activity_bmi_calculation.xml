@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_bmi_calculation"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="java_lang_programming.com.android_rxjava2_demo.article78.BmiCalculationActivity">
+
+    <EditText
+        android:id="@+id/height"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_height"
+        android:inputType="number"
+        android:text="1.70" />
+
+    <EditText
+        android:id="@+id/body_weight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/height"
+        android:text="60.0" />
+
+    <RelativeLayout
+        android:id="@+id/bmi_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/body_weight">
+
+        <TextView
+            android:id="@+id/bmi_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BMI" />
+
+        <TextView
+            android:id="@+id/bmi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_toEndOf="@+id/bmi_label"
+            android:layout_toRightOf="@+id/bmi_label"
+            tools:text="19.0" />
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bmi_layout"
+        tools:text="You are normal." />
+
+</RelativeLayout>
